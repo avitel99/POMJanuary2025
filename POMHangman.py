@@ -97,7 +97,7 @@ def arithmetics():
         return 1
     else:
         print('The correct answer is:',eval(f'{a} {operations[n]} {b}'),'.-$2')
-        return -1
+        return -2
 def algebra():
     global mon
     x1 = x2 = 0
