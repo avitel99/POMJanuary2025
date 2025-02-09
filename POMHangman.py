@@ -165,6 +165,7 @@ def buy():
             buy()
 def game():
     global life
+    global score
     alf = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v',
            'w',
            'x', 'y', 'z']
@@ -184,13 +185,15 @@ def game():
                 alf.pop(alf.index(u))
             else:
                 life -= 1
-                print('That is incorrect! Lives:', life * '♡')
+                print('That is incorrect! Lives:', life * '♡',life)
                 alf.pop(alf.index(u))
         if life == 0:
-            print('You have 0 lives left, the word was: ', *word, ' Thank you for playing.',sep='')
+            print('You have 0 lives left, the word was: "', *word, '". Thank you for playing. Your score was ',score,'.',
+            sep='')
             sys.exit()
         else:
             print(*ans)
+            score+=1
             print('You win! +1 point. Would you like to play again (type play), buy more lives (type buy), or earn money'
                   ' (type money)?')
             options = ['money', 'play', 'buy']
