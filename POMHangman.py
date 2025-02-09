@@ -108,13 +108,13 @@ def algebra():
     print('Solve the following polynomial:')
     print('find both roots (write them in one line, separated by a space)')
     if -x1 - x2 > 0 and x1 * x2 > 0:
-        print('x²+', - x1 - x2, 'x+', x1 * x2, sep='')
+        print('x²+', - x1 - x2, 'x+', x1 * x2,'=0', sep='')
     elif -x1 - x2 > 0 and x1 * x2 < 0:
-        print('x²+', -x1 - x2, 'x', x1 * x2, sep='')
+        print('x²+', -x1 - x2, 'x', x1 * x2,'=0', sep='')
     elif -x1 - x2 < 0 and x1 * x2 > 0:
-        print('x²', -x1 - x2, 'x+', x1 * x2, sep='')
+        print('x²', -x1 - x2, 'x+', x1 * x2,'=0', sep='')
     else:
-        print('x²', -x1 - x2, 'x', x1 * x2, sep='')
+        print('x²', -x1 - x2, 'x', x1 * x2,'=0', sep='')
     while True:
         try:
             a1, a2 = map(int, input().split())
